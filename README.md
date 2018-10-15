@@ -1,4 +1,4 @@
-# Perfect Number Challenge #
+# Perfect Number Test #
 
 ## About
   In the task it mentions that a function should be created, that can be found in root directory in the `perfect_number.php` file.
