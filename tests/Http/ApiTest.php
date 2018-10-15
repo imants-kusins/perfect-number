@@ -8,7 +8,6 @@ class ApiTest extends TestCase
     /** @test */
     public function it_can_classify_numbers_through_http_api_with_oop_option()
     {
-        dd($this->endPoint . 'oop/' . 8128);
         $this->json('GET', $this->endPoint . 'oop/' . 8128)->seeJson([
             'result'    =>  'perfect'
         ]);
