@@ -11,19 +11,30 @@ class NumberClassifier
     /**
      * @param int
      */
-    public function __construct($number)
+    public function __construct(int $number)
     {
         $this->setNumber($number);
     }
 
     /**
-     * Classify the number using getClassification() function
+     * Classify the number
      * 
-     * @return int
+     * @return string
      */
-    public function classify()
+    public function getClassification()
     {
-        return getClassification($this->number);
+        $sum = 0;
+        for ($c = 1; $c < $this->number; $c++) {
+            $sum += ($this->number % $c == 0) ? $c : 0;
+        }
+
+        if ($sum == $this->number) {
+            return 'perfect';
+        } elseif ($sum < $this->number) {
+            return 'deficient';
+        }
+
+        return 'abundant';
     }
 
     /**
@@ -41,5 +52,15 @@ class NumberClassifier
         $this->number = (int) $number;
 
         return $this;
+    }
+
+    /**
+     * Number geter
+     * 
+     * @return int
+     */
+    public function getNumber()
+    {
+        return $this->number;
     }
 }

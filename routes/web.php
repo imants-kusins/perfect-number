@@ -12,7 +12,7 @@ $router->group(['prefix' => 'api/v1'], function() use ($router) {
             
             if ($type === 'oop') {
                 $service = new NumberClassifier($number);
-                $result = $service->classify();
+                $result = $service->getClassification();
             } else {
                 $result = getClassification($number);
             }

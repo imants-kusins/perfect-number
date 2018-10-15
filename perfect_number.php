@@ -13,10 +13,10 @@ function getClassification(int $number)
     }
 
     if ($sum == $number) {
-        return "perfect";
+        return 'perfect';
     } elseif ($sum < $number) {
-        return "deficient";
+        return 'deficient';
     }
 
-    return "abundant";
+    return 'abundant';
 }

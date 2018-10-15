@@ -18,7 +18,7 @@ class PerfectOOPTest extends TestCase
         foreach ($this->testValues['perfect'] as $value) {
             $service = new NumberClassifier($value);
 
-            $this->assertEquals('perfect', $service->classify());
+            $this->assertEquals('perfect', $service->getClassification());
         }
     }
 
@@ -28,7 +28,7 @@ class PerfectOOPTest extends TestCase
         foreach ($this->testValues['abundant'] as $value) {
             $service = new NumberClassifier($value);
 
-            $this->assertEquals('abundant', $service->classify());
+            $this->assertEquals('abundant', $service->getClassification());
         }
     }
 
@@ -38,7 +38,7 @@ class PerfectOOPTest extends TestCase
         foreach ($this->testValues['deficient'] as $value) {
             $service = new NumberClassifier($value);
 
-            $this->assertEquals('deficient', $service->classify());
+            $this->assertEquals('deficient', $service->getClassification());
         }
     }
 }
